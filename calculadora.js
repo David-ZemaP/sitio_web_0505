@@ -4,8 +4,22 @@
 // Parámetros:
 
 function calcular_IMC() {
-    var peso = document.getElementById("peso").value;
-    var altura = document.getElementById("altura").value;
-    var imc = peso / (altura * altura); // Fórmula del IMC
-    alert("Tu IMC es: " + imc); // Muestra el IMC en una alerta de pantalla
+    const peso = document.getElementById("peso").value;
+    const altura = document.getElementById("altura").value;
+
+    var resultado = document.getElementById("resultado"); // Obtener el elemento donde se mostrará el resultado
+
+    const imc = peso / (altura * altura);
+    
+    resultado.innerHTML = 'Tu IMC es ' + imc.toFixed(2) 
+
+    if (imc < 18.5) {
+        resultado.innerHTML += " Bajo peso";
+    } else if (imc >= 18.5 && imc < 24.9) {
+        resultado.innerHTML += " Peso normal";
+    } else if (imc >= 25 && imc < 29.9) {
+        resultado.innerHTML += " Sobrepeso";
+    } else {
+        resultado.innerHTML += " Obesidad";
+    }
 }
