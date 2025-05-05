@@ -3,8 +3,8 @@ function cambiarOrden() {
     let cajas = contenedor.children;
     let cajasArray = Array.from(cajas).reverse();
   
-    contenedor.innerHTML = ""; // Borra las cajas
+    contenedor.innerHTML = ""; 
     for (let caja of cajasArray) {
-      contenedor.appendChild(caja); // Agrega en orden invertido
+      contenedor.appendChild(caja); 
     }
   }
