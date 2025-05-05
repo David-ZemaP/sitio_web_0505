@@ -26,6 +26,11 @@ a{
     font-size: 24px;
     border-radius: 8px;
     box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
 }
 
 .contenedor {
@@ -43,8 +48,21 @@ a{
     gap: 10px;
     flex-wrap: wrap;
 }
+
 button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 100%;
+    }
 }
