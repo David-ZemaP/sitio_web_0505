@@ -6,6 +6,23 @@
     <title>Calculadora</title>
 </head>
 <body>
-    
+    <nav>
+        <ul>
+            <li><a href="index.html">Color</a></li>
+            <li><a href="cajas.html">Cajas</a></li>
+            <li><a href="calculadora.html">Calculadora</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Calculadora</h1>
+        <form id="calculator-form">
+            <input type="number" id="altura" placeholder="Altura [m]" required>
+            <input type="number" id="peso" placeholder="Peso [kg]" required>
+            <button type="submit">Calcular</button>
+        </form>
+        <div id="result"></div>
+
+        <script src="calculadora.js"></script>
+    </main>
 </body>
 </html>
